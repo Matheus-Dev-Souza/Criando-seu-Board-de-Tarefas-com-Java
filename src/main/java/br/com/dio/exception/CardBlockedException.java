@@ -1,8 +1,14 @@
 package br.com.dio.exception;
 
-public class CardBlockedException extends RuntimeException{
+public final class CardBlockedException extends RuntimeException {
 
-    public CardBlockedException(final String message) {
+    private static final long serialVersionUID = 1L;
+
+    public CardBlockedException(String message) {
         super(message);
+    }
+
+    public CardBlockedException(String message, Throwable cause) {
+        super(message, cause);
     }
 }

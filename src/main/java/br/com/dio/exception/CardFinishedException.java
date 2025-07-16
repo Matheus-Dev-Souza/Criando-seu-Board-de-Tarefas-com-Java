@@ -1,8 +1,14 @@
 package br.com.dio.exception;
 
-public class CardFinishedException extends RuntimeException{
+public final class CardFinishedException extends RuntimeException {
 
-    public CardFinishedException(final String message) {
+    private static final long serialVersionUID = 1L;
+
+    public CardFinishedException(String message) {
         super(message);
+    }
+
+    public CardFinishedException(String message, Throwable cause) {
+        super(message, cause);
     }
 }
